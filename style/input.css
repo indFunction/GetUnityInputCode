@@ -1,0 +1,24 @@
+#input {
+    overflow-x: scroll;
+    display: flex;
+    min-height: 480px;
+}
+
+#input > div {
+    margin: 0 16px;
+}
+#input > div:first-of-type {
+    margin-left: 0;
+}
+#input > div:last-of-type {
+    margin-right: 0;
+}
+#input > #keyboard {
+    min-width: 1440px;
+}
+#input > #mouse {
+    min-width: 320px;
+}
+#input > #gamepad {
+    min-width: 960px;
+}

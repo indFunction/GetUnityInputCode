@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="ja-jp">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <title>Unity Input System 入力コード取得ツール</title>
+
+        <meta property="title" content="Unity Input System 入力コード取得ツール" />
+        <meta property="description" content="キーボード，マウス，ゲームパッドの入力を取得するコードを生成します。" />
+        <meta property="keywords" content="独立関数,indFunction,ウェブ,Web,ツール,Tool,ユーティリティー,Utility,Unity,Input System,コード,入力,取得,C#,キーボード,Keyboard,マウス,Mouse,ゲームパッド,Gamepad" />
+        <meta property="author" content="独立関数：独立定義虚構関数 / indFunction: indDef.voidFunction" />
+
+        <meta property="og:site_name" content="Unity Input System 入力コード取得ツール" />
+        <meta property="og:url" content="https://GetUnityInputCode.indFunction.work" />
+        <meta property="og:title" content="Unity Input System 入力コード取得ツール" />
+        <meta property="og:description" content="キーボード，マウス，ゲームパッドの入力を取得するコードを生成します。" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/media/hero.png" />
+
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut" href="/media/icon.png" />
+
+        <link rel="stylesheet" href="/style/global.css" />
+        <link rel="stylesheet" href="/style/summary.css" />
+        <link rel="stylesheet" href="/style/output.css" />
+        <link rel="stylesheet" href="/style/input.css" />
+        <link rel="stylesheet" href="/style/copyright.css" />
+        <link rel="stylesheet" href="/parts/css/keyboard.css" />
+        <link rel="stylesheet" href="/parts/css/mouse.css" />
+        <link rel="stylesheet" href="/parts/css/gamepad.css" />
+    </head>
+    <body>
+        <main>
+            <div id="summary">
+                <div class="title">Unity Input System 入力コード生成ツール</div>
+                <div class="explanation">
+                    キーボード，マウス，ゲームパッドの入力を取得するコード（C#）を生成します。<br />
+                    基本的なデバイスのみをサポートしているため、ここに含まれないコードやデバイスについてはClass <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Keyboard.html" target="_blank" rel="noreferrer">Keyboard</a> / <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Mouse.html" target="_blank" rel="noreferrer">Mouse</a> / <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Gamepad.html" target="_blank" rel="noreferrer">Gamepad</a>や<a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.html" target="_blank" rel="noreferrer">その他のリファレンス</a>を参照してください。<br />
+                    使用する際には<b>Input System</b>をインストールし、スクリプト内部でインクルード：<code>using UnityEngine.InputSystem;</code>する必要があります。
+                </div>
+            </div>
+            <div id="output">
+                <div class="result">
+                    <div class="item">生成したコード：</div>
+                    <div class="function">
+                        <input class="inputA" type="text" id="code" />
+                    </div>
+                    <div class="function">
+                        <button onclick="copyInputCode()">コピー</button>
+                    </div>
+                    <div class="item">型：</div>
+                    <div class="function">
+                        <input class="inputB" type="text" id="type" />
+                    </div>
+                    <div class="function">
+                        <button onclick="copyInputType()">コピー</button>
+                    </div>
+                </div>
+                <div class="option">
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                </div>
+            </div>
+            <div id="input">
+                <div id="keyboard"></div>
+                <div id="mouse"></div>
+                <div id="gamepad"></div>
+            </div>
+            <div id="copyright">
+                Copyright 2022 <a href="https://www.indfunction.work/" target="_blank" rel="noreferrer">独立関数 / indFunction</a>
+            </div>
+        </main>
+
+        <script type="text/javascript" src="/scripts/generateCode.js"></script>
+        <script type="text/javascript" src="/parts/js/keyboard.js"></script>
+        <script type="text/javascript" src="/parts/js/mouse.js"></script>
+        <script type="text/javascript" src="/parts/js/gamepad.js"></script>
+    </body>
+</html>

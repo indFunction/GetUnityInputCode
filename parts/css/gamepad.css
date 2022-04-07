@@ -1,0 +1,243 @@
+:root {
+    --gamepadLine: #000;
+    --gamepadFill: #fff;
+    --gamepadHover: #ddd;
+    --gamepadActive: #bbb;
+}
+
+#gamepad {
+    display: flex;
+    flex-direction: column;
+    width: 960px;
+    height: 480px;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--gamepadLine);
+    background-color: var(--gamepadFill);
+}
+#gamepad button {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    appearance: none;
+    color: inherit;
+    background-color: transparent;
+}
+
+#gamepad > .side {
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+}
+#gamepad > .top {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+#gamepad > .side > div {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+#gamepad > .side > div > .trigger {
+    height: 66.6666%;
+}
+#gamepad > .side > div > .shoulder {
+    height: 33.3333%;
+}
+#gamepad > .top > div {
+    display: flex;
+    height: 50%;
+}
+#gamepad > .top > div > .stick,
+#gamepad > .top > div > .r_button,
+#gamepad > .top > div > .d_pad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+#gamepad > .top > div > .stick > button,
+#gamepad > .top > div > .r_button > div,
+#gamepad > .top > div > .d_pad > div {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+}
+#gamepad > .top > div > .home {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+#gamepad > .top > div > .voidA {
+    width: 10%;
+}
+#gamepad > .top > div > .voidB {
+    width: 40%;
+}
+#gamepad > .top > div > .home > button {
+    width: 33.3333%;
+    height: 20%;
+}
+#gamepad > .top > div > .r_button > div > div,
+#gamepad > .top > div > .d_pad > div > div {
+    display: flex;
+    flex-wrap: wrap;
+}
+#gamepad > .top > div > .r_button > div > div > div,
+#gamepad > .top > div > .r_button > div > div > button,
+#gamepad > .top > div > .d_pad > div > div > div,
+#gamepad > .top > div > .d_pad > div > div > button {
+    width: 33.3333%;
+    height: 33.3333%;
+}
+#gamepad > .top > div > .d_pad > div > div > .center {
+    display: flex;
+    flex-wrap: wrap;
+}
+#gamepad > .top > div > .d_pad > div > div > .center > div {
+    display: flex;
+    width: 50%;
+    height: 50%;
+}
+#gamepad > .top > div > .d_pad > div > div > .center > .start_start {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#gamepad > .top > div > .d_pad > div > div > .center > .start_end {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+#gamepad > .top > div > .d_pad > div > div > .center > .end_start {
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+#gamepad > .top > div > .d_pad > div > div > .center > .end_end {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#gamepad > .top > div > .stick > button > div,
+#gamepad > .top > div > .r_button > div > div,
+#gamepad > .top > div > .d_pad > div > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#gamepad > .side > div > button > div,
+#gamepad > .top > div > .home > button > div,
+#gamepad > .top > div > .stick > button > div,
+#gamepad > .top > div > .r_button > div > div > .button > div,
+#gamepad > .top > div > .d_pad > div > div > .button > div {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 18px);
+    height: calc(100% - 18px);
+    margin: 4px;
+    padding: 4px;
+    border-radius: 4px;
+    border: solid 1px var(--gamepadLine);
+    background-color: var(--gamepadFill);
+}
+#gamepad > .top > div > .stick > button > div,
+#gamepad > .top > div > .r_button > div > div > .button > div {
+    user-select: none;
+    border-radius: 50%;
+}
+#gamepad > .top > div > .d_pad > div > div > .up > div {
+    margin-bottom: 0;
+    padding-bottom: 8px;
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+    border-bottom: solid 1px transparent;
+}
+#gamepad > .top > div > .d_pad > div > div > .left > div {
+    margin-right: 0;
+    padding-right: 8px;
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+    border-right: solid 1px transparent;
+}
+#gamepad > .top > div > .d_pad > div > div > .right > div {
+    margin-left: 0;
+    padding-left: 8px;
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+    border-left: solid 1px transparent;
+}
+#gamepad > .top > div > .d_pad > div > div > .down > div {
+    margin-top: 0;
+    padding-top: 8px;
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+    border-top: solid 1px transparent;
+}
+#gamepad > .top > div > .d_pad > div > div > .center {
+    background-color: var(--gamepadFill);
+}
+#gamepad > .top > div > .d_pad > div > div > .center > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    border: solid 1px var(--gamepadLine);
+    /* background-color: transparent; */
+}
+#gamepad > .top > div > .d_pad > div > div > .center > .start_start > div {
+    border-start-end-radius: 0;
+    border-end-start-radius: 0;
+    border-top: none;
+    border-left: none;
+}
+#gamepad > .top > div > .d_pad > div > div > .center > .start_end > div {
+    border-start-start-radius: 0;
+    border-end-end-radius: 0;
+    border-top: none;
+    border-right: none;
+}
+#gamepad > .top > div > .d_pad > div > div > .center > .end_start > div {
+    border-start-start-radius: 0;
+    border-end-end-radius: 0;
+    border-bottom: none;
+    border-left: none;
+}
+#gamepad > .top > div > .d_pad > div > div > .center > .end_end > div {
+    border-start-end-radius: 0;
+    border-end-start-radius: 0;
+    border-bottom: none;
+    border-right: none;
+}
+#gamepad > .side > div > button > div:hover,
+#gamepad > .top > div > .home > button > div:hover,
+#gamepad > .top > div > .stick > button > div:hover,
+#gamepad > .top > div > .r_button > div > div > .button > div:hover,
+#gamepad > .top > div > .d_pad > div > div > .button > div:hover {
+    background-color: var(--gamepadHover);
+}
+#gamepad > .side > div > button > div:active,
+#gamepad > .top > div > .home > button > div:active,
+#gamepad > .top > div > .stick > button > div:active,
+#gamepad > .top > div > .r_button > div > div > .button > div:active,
+#gamepad > .top > div > .d_pad > div > div > .button > div:active {
+    background-color: var(--gamepadActive);
+}

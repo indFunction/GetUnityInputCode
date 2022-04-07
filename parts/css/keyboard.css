@@ -1,0 +1,142 @@
+:root {
+    --keyboardLine: #000;
+    --keyboardFill: #fff;
+    --keyboardHover: #ddd;
+    --keyboardActive: #bbb;
+}
+
+#keyboard {
+    display: flex;
+    width: 1440px;
+    height: 480px;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--keyboardLine);
+    background-color: var(--keyboardFill);
+}
+#keyboard button {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    appearance: none;
+    color: inherit;
+    background-color: transparent;
+}
+
+#keyboard > .letter {
+    display: flex;
+    flex-direction: column;
+    width: 68.1818%;
+}
+#keyboard > .operation {
+    display: flex;
+    flex-direction: column;
+    width: 13.6363%;
+    margin-left: 16px;
+}
+#keyboard > .padA {
+    display: flex;
+    flex-direction: column;
+    width: 13.6363%;
+    margin-left: 16px;
+}
+#keyboard > .padB {
+    display: flex;
+    flex-direction: column;
+    width: 4.5454%;
+}
+
+#keyboard > div > div {
+    display: flex;
+    text-align: left;
+    height: 16.6666%;
+}
+#keyboard > div > div:first-of-type {
+    margin-bottom: 16px;
+}
+
+#keyboard > .letter > div > .keyA {
+    width: 6.6666%;
+}
+#keyboard > .letter > div > .keyB {
+    width: 9.9999%;
+}
+#keyboard > .letter > div > .keyC {
+    width: 13.3333%;
+}
+#keyboard > .letter > div > .keyD {
+    width: 16.6666%;
+}
+#keyboard > .letter > div > .keyE {
+    width: 46.6666%;
+}
+#keyboard > .letter > div > .keyF {
+    width: 6.6666%;
+    border: none;
+}
+#keyboard > .letter > div > .keyG {
+    width: 3.3333%;
+    border: none;
+}
+
+#keyboard > .operation > div > .keyA {
+    width: 33.3333%;
+}
+#keyboard > .operation > div > .keyB {
+    width: 33.3333%;
+    border: none;
+}
+
+#keyboard > .padA > div > .keyA {
+    width: 33.3333%;
+}
+#keyboard > .padA > div > .keyB {
+    width: 66.6666%;
+}
+
+#keyboard > .padB > div > .keyA {
+    width: 100%;
+    height: 100%;
+}
+#keyboard > .padB > div > .keyB {
+    z-index: 1;
+    width: 100%;
+    height: 200%;
+}
+#keyboard > .padB > div > .keyC {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#keyboard > div > div > button > div {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 18px);
+    height: calc(100% - 18px);
+    margin: 4px;
+    padding: 4px;
+    text-align: left;
+    border-radius: 4px;
+    border: solid 1px var(--keyboardLine);
+    background-color: var(--keyboardFill);
+}
+#keyboard > div > div > button > div:hover {
+    background-color: var(--keyboardHover);
+}
+#keyboard > div > div > button > div:active {
+    background-color: var(--keyboardActive);
+}

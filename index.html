@@ -31,6 +31,9 @@
         <link rel="stylesheet" href="/parts/css/mouse.css" />
         <link rel="stylesheet" href="/parts/css/gamepad.css" />
     </head>
+
+    <!-- 1280px × 960px以上の解像度／ディスプレイでの使用を推奨 -->
+
     <body>
         <main>
             <div id="summary">
@@ -43,19 +46,23 @@
             </div>
             <div id="output">
                 <div class="result">
-                    <div class="item">生成したコード：</div>
-                    <div class="function">
-                        <input class="inputA" type="text" id="code" />
+                    <div>
+                        <div class="item">生成したコード：</div>
+                        <div class="function inputA">
+                            <input type="text" id="code" />
+                        </div>
+                        <div class="function">
+                            <button onclick="copyInputCode()">コピー</button>
+                        </div>
                     </div>
-                    <div class="function">
-                        <button onclick="copyInputCode()">コピー</button>
-                    </div>
-                    <div class="item">型：</div>
-                    <div class="function">
-                        <input class="inputB" type="text" id="type" />
-                    </div>
-                    <div class="function">
-                        <button onclick="copyInputType()">コピー</button>
+                    <div>
+                        <div class="item">型：</div>
+                        <div class="function inputB">
+                            <input type="text" id="type" />
+                        </div>
+                        <div class="function">
+                            <button onclick="copyInputType()">コピー</button>
+                        </div>
                     </div>
                 </div>
                 <div class="option">

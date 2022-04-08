@@ -2,23 +2,33 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin: -4px;
 }
 
-#output > .result > div:first-of-type {
-    margin-left: 0;
+#output > .result > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 4px 0;
 }
-#output > .result > div:last-of-type {
-    margin-right: 0;
+
+#output > .result > div > .item {
+    flex-shrink: 0;
+    margin: 0 -4px 0 4px;
+    font-weight: 800;
 }
-#output > .result > .function {
+#output > .result > div > .function {
     margin: 0 4px;
 }
-#output > .result > .item {
-    font-weight: 800;
-    margin: 0 -4px 0 4px;
+#output > .result > div > .inputA {
+    width: calc(480px + 6px);
+}
+#output > .result > div > .inputB {
+    width: calc(240px + 6px);
 }
 
-#output > .result > div > input {
+#output > .result > div > div > input {
+    width: calc(100% - 6px);
     height: 24px;
     margin: 0;
     padding: 0 2px;
@@ -33,20 +43,14 @@
     appearance: none;
     background: var(--white);
 }
-#output > .result > div > input:hover {
+#output > .result > div > div > input:hover {
     background: var(--itemHover);
 }
-#output > .result > div > input:active {
+#output > .result > div > div > input:active {
     background: var(--itemActive);
 }
-#output > .result > div > .inputA {
-    width: 480px;
-}
-#output > .result > div > .inputB {
-    width: 240px;
-}
 
-#output > .result > div > button {
+#output > .result > div > div > button {
     cursor: pointer;
     user-select: none;
     display: flex;
@@ -67,13 +71,28 @@
     appearance: none;
     background: var(--white);
 }
-#output > .result > div > button:hover {
+#output > .result > div > div > button:hover {
     background: var(--itemHover);
 }
-#output > .result > div > button:active {
+#output > .result > div > div > button:active {
     background: var(--itemActive);
 }
 
-#output > .option > div > label {
+#output > .option > div > div > label {
     cursor: pointer;
+}
+
+@media screen and (max-width: 1279px) {
+    #output > .result {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #output > .result > div {
+        width: 100%;
+    }
+    #output > .result > div > .inputA,
+    #output > .result > div > .inputB {
+        flex-grow: 1;
+        width: calc(100% - 6px);
+    }
 }
